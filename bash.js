@@ -1,12 +1,4 @@
-process.stdout.write('prompt > ');
+// PWD Command...
 
-process.stdin.on('data', (data) => {
-  const cmd = data.toString().trim();
-
-  if (cmd === 'pwd') {
-    process.stdout.write(`Test: ${process.cwd()}`);
-  } 
-
-  process.stdout.write('\nprompt > ');
-
-});
+const pwdCmd = require('./pwd.js');
+pwdCmd();
